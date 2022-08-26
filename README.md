@@ -19,4 +19,4 @@
 [![asciicast]( https://asciinema.org/a/u37dYB1p5cchklVqHv7ra6R0M.png)](   https://asciinema.org/a/u37dYB1p5cchklVqHv7ra6R0M)
 
 # Brain-prime
-[![asciicast]( https://asciinema.org/a/https://asciinema.org/a/EWUIZ2lo2ourq88zxnE7twKgk.png)](   https://asciinema.org/a/https://asciinema.org/a/EWUIZ2lo2ourq88zxnE7twKgk)
+[![asciicast]( https://asciinema.org/a/EWUIZ2lo2ourq88zxnE7twKgk.png)](   /https://asciinema.org/a/EWUIZ2lo2ourq88zxnE7twKgk)
