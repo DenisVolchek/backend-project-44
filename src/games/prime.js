@@ -35,6 +35,7 @@ export default (name) => {
       winStrike += 1;
     } else {
       informAboutWrongAnswer(name, [userInput, correctAnswer]);
+      return;
     }
   }
 
