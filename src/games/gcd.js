@@ -1,7 +1,7 @@
 import {
   ATTEMPTS_LIMIT, informAboutCorrectAnswer, informAboutWin, askQuestion, informAboutWrongAnswer,
   getRandomNumber,
-} from './utils/helpers.js';
+} from '../utils/helpers.js';
 
 const gcd = (a, b) => {
   if (!b) {
