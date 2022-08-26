@@ -3,23 +3,27 @@ import {
   getRandomNumber,
 } from './utils.js';
 
-const USER_INPUT_ACCEPT = 'yes';
-const USER_INPUT_DECLINE = 'no';
+const gcd = (a, b) => {
+  if (!b) {
+    return a;
+  }
 
-const isEven = (value) => value % 2 === 0;
+  return gcd(b, a % b);
+};
 
 export default (name) => {
   let winStrike = 0;
 
-  console.log(`Answer "${USER_INPUT_ACCEPT}" if the number is even, otherwise answer "${USER_INPUT_DECLINE}".`);
+  console.log('Find the greatest common divisor of given numbers.');
 
   while (winStrike < ATTEMPTS_LIMIT) {
-    const value = getRandomNumber(1);
+    const a = getRandomNumber(1);
+    const b = getRandomNumber(1);
 
-    const correctAnswer = isEven(value) ? USER_INPUT_ACCEPT : USER_INPUT_DECLINE;
-    const userInput = askQuestion(value);
+    const correctAnswer = gcd(a, b);
+    const userInput = askQuestion(`${a} ${b}`);
 
-    if (userInput === correctAnswer) {
+    if (Number(userInput) === correctAnswer) {
       informAboutCorrectAnswer();
       winStrike += 1;
     } else {

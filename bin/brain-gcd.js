@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 import greetings from '../src/cli.js';
-import calcGame from '../src/calcGame.js';
+import gcd from '../src/gcdGame.js';
 
 const name = greetings();
 
-calcGame(name);
+gcd(name);

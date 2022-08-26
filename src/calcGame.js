@@ -1,5 +1,6 @@
 import {
   ATTEMPTS_LIMIT, informAboutCorrectAnswer, informAboutWin, askQuestion, informAboutWrongAnswer,
+  getRandomNumber,
 } from './utils.js';
 
 const TASK_TYPES = {
@@ -8,18 +9,16 @@ const TASK_TYPES = {
   SUBTRACTION: '-',
 };
 
-const getRandomNumberInRange = (max) => Math.floor(Math.random() * max);
-
 const detectTaskType = () => {
   const coll = Object.values(TASK_TYPES);
-  const taskIdx = getRandomNumberInRange(coll.length);
+  const taskIdx = getRandomNumber(0, coll.length);
 
   return coll[taskIdx];
 };
 
 const createTask = () => {
-  const firstOperand = getRandomNumberInRange(100);
-  const secondOperand = getRandomNumberInRange(100);
+  const firstOperand = getRandomNumber();
+  const secondOperand = getRandomNumber();
   const taskType = detectTaskType();
 
   let result = null;
