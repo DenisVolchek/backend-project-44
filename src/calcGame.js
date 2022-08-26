@@ -1,7 +1,7 @@
 import {
   ATTEMPTS_LIMIT, informAboutCorrectAnswer, informAboutWin, askQuestion, informAboutWrongAnswer,
   getRandomNumber,
-} from './utils.js';
+} from './utils/helpers.js';
 
 const TASK_TYPES = {
   MULTIPLICATION: '*',

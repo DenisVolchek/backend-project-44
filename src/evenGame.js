@@ -1,10 +1,9 @@
 import {
   ATTEMPTS_LIMIT, informAboutCorrectAnswer, informAboutWin, askQuestion, informAboutWrongAnswer,
   getRandomNumber,
-} from './utils.js';
+} from './utils/helpers.js';
 
-const USER_INPUT_ACCEPT = 'yes';
-const USER_INPUT_DECLINE = 'no';
+import { USER_INPUT_ACCEPT, USER_INPUT_DECLINE } from './utils/binaryLogic.js';
 
 const isEven = (value) => value % 2 === 0;
 
