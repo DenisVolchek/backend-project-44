@@ -11,7 +11,7 @@ const TASK_TYPES = {
 
 const detectTaskType = () => {
   const coll = Object.values(TASK_TYPES);
-  const taskIdx = getRandomNumber(0, coll.length);
+  const taskIdx = getRandomNumber(0, coll.length - 1);
 
   return coll[taskIdx];
 };
