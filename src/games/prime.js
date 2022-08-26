@@ -1,5 +1,6 @@
 import { USER_INPUT_ACCEPT, USER_INPUT_DECLINE } from '../utils/binaryLogic.js';
 import {
+  ATTEMPTS_LIMIT, informAboutWin,
   informAboutCorrectAnswer, askQuestion, informAboutWrongAnswer,
   getRandomNumber,
 } from '../utils/helpers.js';
@@ -19,9 +20,11 @@ const isPrime = (number) => {
 };
 
 export default (name) => {
+  let winStrike = 0;
+
   console.log(`Answer '${USER_INPUT_ACCEPT}' if given number is prime. Otherwise answer '${USER_INPUT_DECLINE}'`);
 
-  while (true) {
+  while (winStrike < ATTEMPTS_LIMIT) {
     const value = getRandomNumber();
 
     const correctAnswer = isPrime(value) ? USER_INPUT_ACCEPT : USER_INPUT_DECLINE;
@@ -29,8 +32,11 @@ export default (name) => {
 
     if (userInput === correctAnswer) {
       informAboutCorrectAnswer();
+      winStrike += 1;
     } else {
       informAboutWrongAnswer(name, [userInput, correctAnswer]);
     }
   }
+
+  informAboutWin(name);
 };
