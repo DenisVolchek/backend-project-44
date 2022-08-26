@@ -23,7 +23,7 @@ export default (name) => {
       winStrike += 1;
     } else {
       informAboutWrongAnswer(name, [userInput, correctAnswer]);
-      winStrike = 0;
+      return;
     }
   }
 

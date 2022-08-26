@@ -44,7 +44,7 @@ export default (name) => {
       winStrike += 1;
     } else {
       informAboutWrongAnswer(name, [userInput, answer]);
-      winStrike = 0;
+      return;
     }
   }
 
